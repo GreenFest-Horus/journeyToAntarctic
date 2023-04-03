@@ -19,30 +19,30 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <nav class="header__navigation navigation">
+        <nav class="header__navigation navigation" data-menu>
           <div class="navigation__logo">
             <a class="navigation__link" href="index.html">
               <span class="visually-hidden">Переход на главную страницу</span>
               <svg aria-hidden="true" focusable="false" width="70" height="38">
                 <use href="./img/sprite.svg#logo"></use>
               </svg>
-              <button class="navigation__button" type="button">
-                <span class="visually-hidden">Открыть/закрыть меню</span>
-              </button>
             </a>
           </div>
-          <ul class="navigation__list">
+          <button class="navigation__button" type="button" data-menu-button>
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
+          <ul class="navigation__list navigation__list--header">
             <li class="navigation__item">
-              <a href="#advantages"> Преимущества </a>
+              <a href="#advantages" data-menu-button> Преимущества </a>
             </li>
             <li class="navigation__item">
-              <a href="#!"> Направления </a>
+              <a href="#!" data-menu-button> Направления </a>
             </li>
             <li class="navigation__item">
-              <a href="#cruises"> Ближайшие круизы </a>
+              <a href="#cruises" data-menu-button> Ближайшие круизы </a>
             </li>
             <li class="navigation__item">
-              <a href="#contacts"> Контакты </a>
+              <a href="#contacts" > Контакты </a>
             </li>
           </ul>
         </nav>
@@ -80,16 +80,16 @@
             </a>
           </div>
           <ul class="navigation__list navigation__list--footer">
-            <li class="navigation__item">
+            <li class="navigation__item navigation__item--footer">
               <a href="#advantages"> Преимущества </a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item navigation__item--footer">
               <a href="#"> Направления </a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item navigation__item--footer">
               <a href="#cruises"> Ближайшие круизы </a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item navigation__item--footer">
               <a href="#contacts"> Контакты </a>
             </li>
           </ul>

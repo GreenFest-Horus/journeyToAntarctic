@@ -8,4 +8,39 @@
   justify-content: flex-end;
   gap: 15px;
   transform: translateX(3px);
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    gap: 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+    transform: translateX(-5px);
+    gap: 16px;
+  }
+}
+
+.social__link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+
+    svg {
+      width: 17px;
+      height: 16px;
+    }
+
+    &--ok {
+      svg {
+        width: 10px;
+      }
+    }
+  }
 }
