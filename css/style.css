@@ -1386,6 +1386,115 @@ button,
   margin: 0;
 }
 
+.intro {
+  padding-top: 120px;
+  padding-bottom: 146px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.intro__picture img {
+  width: 100%;
+}
+
+.intro__discription {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding-right: 25px;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #011c40;
+}
+
+.intro__discription h2 {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.intro__discription p {
+  margin: 0;
+}
+
+.advantages {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  min-height: 562px;
+  background-color: #e3ecf6;
+}
+
+.advantages img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+}
+
+.advantages__content {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #011c40;
+}
+
+.advantages__content h2 {
+  margin: 0;
+  margin-bottom: 48px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.advantages__content h3 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantages__content p {
+  margin: 0;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.advantages__item {
+  max-width: 360px;
+  padding: 30px 34px 45px 30px;
+  background-color: #f9fbfd;
+}
+
+.advantages__item svg {
+  margin-bottom: 15px;
+}
+
 .footer {
   background-color: #011c40;
   width: 100%;
@@ -1530,6 +1639,75 @@ button,
   .main__promo-description p {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .intro {
+    padding-top: 90px;
+    padding-bottom: 93px;
+    gap: 30px;
+  }
+
+  .intro__picture {
+    padding-top: 9px;
+  }
+
+  .intro__discription {
+    padding: 0;
+  }
+
+  .intro__discription h2 {
+    margin-bottom: 14px;
+    margin-right: 30px;
+    font-size: 26px;
+    line-height: 37px;
+  }
+
+  .advantages {
+    min-height: 588px;
+  }
+
+  .advantages__content h2 {
+    margin-bottom: 49px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .advantages__content h3 {
+    margin-bottom: 9px;
+  }
+
+  .advantages__content {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .advantages__list {
+    gap: 30px;
+  }
+
+  .advantages__item svg {
+    height: 26px;
+    margin-bottom: 13px;
+  }
+
+  .advantages__item {
+    padding: 26px 16px 19px 20px;
+  }
+
+  .advantages__item--ship svg {
+    width: 21px;
+  }
+
+  .advantages__item--included svg {
+    width: 27px;
+  }
+
+  .advantages__item--boat svg {
+    width: 36px;
+  }
+
+  .advantages__item--boat h3 {
+    margin-bottom: 18px;
   }
 
   .social__list {
@@ -1719,6 +1897,56 @@ button,
   .main__promo-description p {
     font-size: 16px;
     line-height: 23px;
+  }
+
+  .intro {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 43px;
+    padding-top: 57px;
+    padding-bottom: 85px;
+  }
+
+  .intro__picture {
+    padding: 0;
+  }
+
+  .intro__discription h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .advantages {
+    min-height: auto;
+  }
+
+  .advantages__content h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .advantages__content h3 {
+    margin-bottom: 9px;
+    margin-right: 60px;
+  }
+
+  .advantages__content {
+    padding-top: 57px;
+    padding-bottom: 64px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+  }
+
+  .advantages__item {
+    max-width: 100%;
+    padding-top: 25px;
+    padding-bottom: 20px;
   }
 
   .footer__navigation {
