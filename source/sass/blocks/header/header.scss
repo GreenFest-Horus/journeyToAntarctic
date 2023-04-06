@@ -4,6 +4,14 @@
   width: 100%;
   padding: 35px 0;
   z-index: 3;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+  }
 }
 
 .header__navigation {

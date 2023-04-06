@@ -58,6 +58,7 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
+    letter-spacing: -1px;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 4px;
@@ -70,12 +71,14 @@
       font-size: 24px;
       line-height: 32px;
       text-align: center;
+      max-width: 286px;
     }
   }
 
   p {
     margin: 0;
     max-width: 352px;
+    letter-spacing: -0.2px;
 
     @media (max-width: $tablet-width) {
       text-align: center;

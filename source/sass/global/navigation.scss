@@ -44,6 +44,15 @@
         svg {
           fill: currentColor;
         }
+
+        &:focus,
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:active {
+          fill: $color-summer-sky;
+        }
       }
 
       .navigation__list {
@@ -58,15 +67,31 @@
       .navigation__item {
         a {
           color: $color-tangaroa;
+
+          &:focus,
+          &:hover {
+            opacity: 0.7;
+          }
+
+          &:active {
+            color: $color-summer-sky;
+          }
         }
       }
     }
   }
 }
 
+.navigation__link {
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 .navigation__logo {
   @media (max-width: $tablet-width) {
-    padding-top: 7px;
+    padding-top: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -76,6 +101,10 @@
 
   svg {
     fill: #f9fbfd;
+
+    &:active {
+      fill: $color-summer-sky;
+    }
 
     @media (max-width: $tablet-width) {
       width: 38px;
@@ -92,12 +121,12 @@
     margin-right: 40px;
 
     @media (max-width: $tablet-width) {
-      margin-right: 26px;
+      margin-right: 24px;
     }
 
     @media (max-width: $mobile-width) {
       margin-right: 0;
-      margin-bottom: 18px;
+      margin-bottom: 0;
     }
   }
 }
@@ -109,6 +138,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $tablet-width) {
+    gap: 22px;
+  }
 
   &--header {
     @media (max-width: $mobile-width) {
@@ -133,10 +166,10 @@
 }
 
 .navigation__item {
-  max-width: 170px;
+  max-width: 175px;
 
   @media (max-width: $tablet-width) {
-    max-width: 150px;
+    max-width: 151px;
   }
 
   @media (max-width: $mobile-width) {
@@ -153,6 +186,7 @@
     font-size: 16px;
     line-height: 20px;
     color: $color-alice-blue;
+    letter-spacing: 0.5px;
 
     @media (max-width: $tablet-width) {
       font-size: 14px;
@@ -163,6 +197,15 @@
       font-size: 18px;
       line-height: 22px;
     }
+
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: $color-summer-sky;
+    }
   }
 
   &--footer {
@@ -170,6 +213,11 @@
       @media (max-width: $tablet-width) {
         padding-bottom: 3px;
         padding-top: 3px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @media (max-width: $mobile-width) {
         font-size: 12px;
         line-height: 15px;
       }
@@ -184,7 +232,7 @@
     position: absolute;
     display: block;
     top: 10px;
-    right: 7px;
+    right: -8px;
     width: 40px;
     height: 40px;
     background-color: transparent;
