@@ -629,8 +629,17 @@ button,
   justify-content: space-between;
 }
 
+.navigation__link:focus,
+.navigation__link:hover {
+  opacity: 0.7;
+}
+
 .navigation__logo svg {
   fill: #f9fbfd;
+}
+
+.navigation__logo svg:active {
+  fill: #29a3cc;
 }
 
 .navigation__logo--footer {
@@ -655,7 +664,7 @@ button,
 }
 
 .navigation__item {
-  max-width: 170px;
+  max-width: 175px;
 }
 
 .navigation__item a {
@@ -671,6 +680,16 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: #f9fbfd;
+  letter-spacing: 0.5px;
+}
+
+.navigation__item a:focus,
+.navigation__item a:hover {
+  opacity: 0.7;
+}
+
+.navigation__item a:active {
+  color: #29a3cc;
 }
 
 .navigation__button {
@@ -1380,10 +1399,12 @@ button,
   font-style: normal;
   font-size: 54px;
   line-height: 66px;
+  letter-spacing: -2px;
 }
 
 .main__promo-description p {
   margin: 0;
+  letter-spacing: 0.5px;
 }
 
 .intro {
@@ -1419,6 +1440,7 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
+  letter-spacing: -1px;
 }
 
 .intro__discription p {
@@ -1597,8 +1619,8 @@ button,
 .catalog__item:focus,
 .catalog__item:focus-within {
   outline: none;
-  -webkit-box-shadow: 0 0 25px #29a3cc;
-  box-shadow: 0 0 25px #29a3cc;
+  -webkit-box-shadow: 0 0 25px #011c40;
+  box-shadow: 0 0 25px #011c40;
 }
 
 .catalog__item:hover .catalog__item-content,
@@ -1737,11 +1759,13 @@ button,
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
+  letter-spacing: -1px;
 }
 
 .form__description p {
   margin: 0;
   max-width: 352px;
+  letter-spacing: -0.2px;
 }
 
 .form__wrapper {
@@ -2046,6 +2070,7 @@ button,
   -webkit-transform: translateX(3px);
   -ms-transform: translateX(3px);
   transform: translateX(3px);
+  list-style-type: none;
 }
 
 .social__link {
@@ -2060,6 +2085,19 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.social__link:focus,
+.social__link:hover {
+  opacity: 0.7;
+}
+
+.social__link svg {
+  fill: #f9fbfd;
+}
+
+.social__link svg:active {
+  fill: #29a3cc;
 }
 
 /* @mixin hover-focus {
@@ -2116,7 +2154,7 @@ button,
   }
 
   .navigation__logo {
-    padding-top: 7px;
+    padding-top: 0;
   }
 
   .navigation__logo svg {
@@ -2125,7 +2163,11 @@ button,
   }
 
   .navigation__logo--footer {
-    margin-right: 26px;
+    margin-right: 24px;
+  }
+
+  .navigation__list {
+    gap: 22px;
   }
 
   .navigation__list--footer {
@@ -2133,7 +2175,7 @@ button,
   }
 
   .navigation__item {
-    max-width: 150px;
+    max-width: 151px;
   }
 
   .navigation__item a {
@@ -2146,6 +2188,10 @@ button,
     padding-top: 3px;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .header {
+    padding-top: 24px;
   }
 
   .main__promo {
@@ -2183,7 +2229,7 @@ button,
 
   .intro__discription h2 {
     margin-bottom: 14px;
-    margin-right: 30px;
+    margin-right: 100px;
     font-size: 26px;
     line-height: 37px;
   }
@@ -2339,7 +2385,7 @@ button,
   }
 
   .contacts__item {
-    padding-right: 35px;
+    padding-right: 25px;
   }
 
   .contacts__item--adress svg {
@@ -2424,6 +2470,15 @@ button,
     fill: currentColor;
   }
 
+  .navigation.active .navigation__link:focus,
+  .navigation.active .navigation__link:hover {
+    opacity: 0.7;
+  }
+
+  .navigation.active .navigation__link:active {
+    fill: #29a3cc;
+  }
+
   .navigation.active .navigation__list {
     width: 100%;
     display: -ms-grid;
@@ -2439,6 +2494,15 @@ button,
     color: #011c40;
   }
 
+  .navigation.active .navigation__item a:focus,
+  .navigation.active .navigation__item a:hover {
+    opacity: 0.7;
+  }
+
+  .navigation.active .navigation__item a:active {
+    color: #29a3cc;
+  }
+
   .navigation__logo {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2451,7 +2515,7 @@ button,
 
   .navigation__logo--footer {
     margin-right: 0;
-    margin-bottom: 18px;
+    margin-bottom: 0;
   }
 
   .navigation__list--header {
@@ -2475,11 +2539,16 @@ button,
     line-height: 22px;
   }
 
+  .navigation__item--footer a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
   .navigation__button {
     position: absolute;
     display: block;
     top: 10px;
-    right: 7px;
+    right: -8px;
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -2515,6 +2584,10 @@ button,
     width: 100%;
   }
 
+  .header {
+    padding-top: 0;
+  }
+
   .main__promo {
     min-height: 500px;
   }
@@ -2528,6 +2601,7 @@ button,
     margin-bottom: 11px;
     font-size: 36px;
     line-height: 45px;
+    letter-spacing: -1px;
   }
 
   .main__promo-description p {
@@ -2551,6 +2625,7 @@ button,
     margin-bottom: 15px;
     font-size: 24px;
     line-height: 34px;
+    margin-right: 90px;
   }
 
   .advantages {
@@ -2589,6 +2664,7 @@ button,
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
+    letter-spacing: -1px;
   }
 
   .catalog {
@@ -2639,6 +2715,7 @@ button,
     font-size: 24px;
     line-height: 32px;
     text-align: center;
+    max-width: 286px;
   }
 
   .form__description p {
@@ -2709,6 +2786,10 @@ button,
     padding-right: 0;
   }
 
+  .contacts__item span {
+    letter-spacing: -0.3px;
+  }
+
   .contacts__item--adress svg {
     margin-top: 5px;
   }
@@ -2718,7 +2799,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 37px;
   }
 
