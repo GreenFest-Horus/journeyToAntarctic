@@ -385,11 +385,35 @@ template {
 }
 
 @font-face {
-  font-style: normal;
+  font-family: "Montserrat";
   font-weight: 400;
-  font-family: "";
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
 }
 
 *,
@@ -413,6 +437,7 @@ html {
   line-height: 24px;
   font-family: "Montserrat", "Verdana", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -653,7 +678,7 @@ button,
   -ms-grid-columns: (max-content)[4];
   grid-template-columns: repeat(4, -webkit-max-content);
   grid-template-columns: repeat(4, max-content);
-  gap: 33px;
+  gap: 0 33px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -661,6 +686,7 @@ button,
 
 .navigation__list--footer {
   margin: 0 auto 0 0;
+  gap: 0 31px;
 }
 
 .navigation__item {
@@ -680,7 +706,6 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: #f9fbfd;
-  letter-spacing: 0.5px;
 }
 
 .navigation__item a:focus,
@@ -694,6 +719,21 @@ button,
 
 .navigation__button {
   display: none;
+}
+
+.navigation__overlay {
+  display: none;
+}
+
+.navigation.active ~ .navigation__overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 43, 102, 0.5);
 }
 
 .btn {
@@ -1376,8 +1416,6 @@ button,
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  -o-object-position: 50% 100%;
-  object-position: 50% 100%;
 }
 
 .main__promo-description {
@@ -1399,12 +1437,10 @@ button,
   font-style: normal;
   font-size: 54px;
   line-height: 66px;
-  letter-spacing: -2px;
 }
 
 .main__promo-description p {
   margin: 0;
-  letter-spacing: 0.5px;
 }
 
 .intro {
@@ -1440,7 +1476,6 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  letter-spacing: -1px;
 }
 
 .intro__discription p {
@@ -1509,8 +1544,12 @@ button,
 
 .advantages__item {
   max-width: 360px;
-  padding: 30px 34px 45px 30px;
+  padding: 30px 34px 40px 30px;
   background-color: #f9fbfd;
+}
+
+.advantages__item p {
+  margin-bottom: 5px;
 }
 
 .advantages__item svg {
@@ -1725,8 +1764,6 @@ button,
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  -o-object-position: 50% 100%;
-  object-position: 50% 100%;
 }
 
 .form__content {
@@ -1759,13 +1796,11 @@ button,
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  letter-spacing: -1px;
 }
 
 .form__description p {
   margin: 0;
   max-width: 352px;
-  letter-spacing: -0.2px;
 }
 
 .form__wrapper {
@@ -2021,6 +2056,10 @@ button,
   user-select: none;
 }
 
+.contacts__link span {
+  color: #011c40;
+}
+
 .contacts__link:hover {
   opacity: 0.6;
 }
@@ -2162,12 +2201,16 @@ button,
     height: 20px;
   }
 
+  .navigation__logo--header {
+    padding-top: 6px;
+  }
+
   .navigation__logo--footer {
     margin-right: 24px;
   }
 
   .navigation__list {
-    gap: 22px;
+    gap: 0 24px;
   }
 
   .navigation__list--footer {
@@ -2263,7 +2306,7 @@ button,
   }
 
   .advantages__item {
-    padding: 26px 16px 19px 20px;
+    padding: 26px 16px 14px 20px;
   }
 
   .advantages__item--ship svg {
@@ -2295,6 +2338,7 @@ button,
   .catalog__list {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 
   .catalog__item-content {
@@ -2385,7 +2429,7 @@ button,
   }
 
   .contacts__item {
-    padding-right: 25px;
+    padding-right: 36px;
   }
 
   .contacts__item--adress svg {
@@ -2426,6 +2470,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 20px 15px;
+    padding-top: 0;
     position: fixed;
     top: 0;
     right: 0;
@@ -2433,6 +2478,7 @@ button,
     height: 100vh;
     background-color: #f9fbfd;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .navigation.active .navigation__button {
@@ -2486,7 +2532,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 8px;
-    margin-top: 27px;
+    margin-top: 6px;
     margin-left: 12px;
   }
 
@@ -2513,7 +2559,12 @@ button,
     height: 22px;
   }
 
+  .navigation__logo--header {
+    padding-top: 20px;
+  }
+
   .navigation__logo--footer {
+    padding-bottom: 18px;
     margin-right: 0;
     margin-bottom: 0;
   }
@@ -2601,7 +2652,6 @@ button,
     margin-bottom: 11px;
     font-size: 36px;
     line-height: 45px;
-    letter-spacing: -1px;
   }
 
   .main__promo-description p {
@@ -2664,7 +2714,6 @@ button,
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
-    letter-spacing: -1px;
   }
 
   .catalog {
@@ -2676,6 +2725,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     padding: 0 10px;
+    gap: 30px;
   }
 
   .catalog__item-content {
@@ -2719,7 +2769,7 @@ button,
   }
 
   .form__description p {
-    max-width: 257px;
+    max-width: 440px;
     font-size: 16px;
     line-height: 23px;
   }
@@ -2784,10 +2834,6 @@ button,
 
   .contacts__item {
     padding-right: 0;
-  }
-
-  .contacts__item span {
-    letter-spacing: -0.3px;
   }
 
   .contacts__item--adress svg {
