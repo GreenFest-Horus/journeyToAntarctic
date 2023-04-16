@@ -22,7 +22,6 @@
       margin-bottom: 30px;
       font-size: 24px;
       line-height: 36px;
-      letter-spacing: -1px;
     }
   }
 
@@ -52,11 +51,13 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     padding: 0 10px;
+    gap: 30px;
   }
 }
 

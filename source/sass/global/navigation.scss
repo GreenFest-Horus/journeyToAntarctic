@@ -7,6 +7,7 @@
       justify-content: flex-start;
       flex-direction: column;
       padding: 20px 15px;
+      padding-top: 0;
       position: fixed;
       top: 0;
       right: 0;
@@ -14,6 +15,7 @@
       height: 100vh;
       background-color: $color-alice-blue;
       overflow-y: scroll;
+      overflow-x: hidden;
 
       .navigation__button {
         top: 13px;
@@ -60,7 +62,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 8px;
-        margin-top: 27px;
+        margin-top: 6px;
         margin-left: 12px;
       }
 
@@ -117,6 +119,16 @@
     }
   }
 
+  &--header {
+    @media (max-width: $tablet-width) {
+      padding-top: 6px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-top: 20px;
+    }
+  }
+
   &--footer {
     margin-right: 40px;
 
@@ -125,6 +137,7 @@
     }
 
     @media (max-width: $mobile-width) {
+      padding-bottom: 18px;
       margin-right: 0;
       margin-bottom: 0;
     }
@@ -134,13 +147,13 @@
 .navigation__list {
   display: grid;
   grid-template-columns: repeat(4, max-content);
-  gap: 33px;
+  gap: 0 33px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (max-width: $tablet-width) {
-    gap: 22px;
+    gap: 0 24px;
   }
 
   &--header {
@@ -151,6 +164,7 @@
 
   &--footer {
     margin: 0 auto 0 0;
+    gap: 0 31px;
 
     @media (max-width: $tablet-width) {
       gap: 23px;
@@ -186,7 +200,6 @@
     font-size: 16px;
     line-height: 20px;
     color: $color-alice-blue;
-    letter-spacing: 0.5px;
 
     @media (max-width: $tablet-width) {
       font-size: 14px;
@@ -253,4 +266,19 @@
       box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
     }
   }
+}
+
+.navigation__overlay {
+  display: none;
+}
+
+.navigation.active ~ .navigation__overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba($prussian-blue, 0.5);
 }
