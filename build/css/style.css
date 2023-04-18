@@ -1680,6 +1680,7 @@ button,
 .catalog__item:focus-within .catalog__item-description {
   height: 270px;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .catalog__item:hover .catalog__item-description::-webkit-scrollbar,
